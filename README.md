@@ -61,6 +61,12 @@ The result is announced by the voice assistant immediately after prediction usin
 
 ---
 
+## Run Programm
+
+Command line : python app.py
+
+(This generates a url as http://127.0.0.1:5000) - Open this url
+
 ## 🧠 Technologies Used
 
 - Python
