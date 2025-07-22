@@ -11,7 +11,7 @@ This project is a web-based salary prediction system built using **Deep Learning
 - Deep Neural Network built using TensorFlow/Keras
 - Feature Scaling and Label Encoding for preprocessing
 - Prediction output embedded in a user-friendly web interface using Flask
-- Voice assistant integration using `pyttsx3`
+- Voice assistant integration using `SpeechSynthesisUtterance` from the Web Speech API
 - Model performance visualization (loss curves, actual vs predicted)
 - Responsive HTML template (form on left, result on right)
 - Git version-controlled and deployed-ready architecture
@@ -57,7 +57,7 @@ The model's predictions align well with actual salary values:
 
 ## 🗣️ Voice Assistant
 
-The result is announced by the voice assistant immediately after prediction using the `pyttsx3` library. This enhances accessibility and usability.
+The result is announced by the voice assistant immediately after prediction using the `SpeechSynthesisUtterance` from the Web Speech API. This enhances accessibility and usability.
 
 ---
 
