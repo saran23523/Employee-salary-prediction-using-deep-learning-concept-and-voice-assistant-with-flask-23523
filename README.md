@@ -74,7 +74,7 @@ Command line : python app.py
 - Flask
 - Scikit-learn
 - HTML/CSS (for frontend)
-- Pyttsx3 (for voice assistant)
+- Javascript (for voice assistant)
 - Matplotlib / Seaborn (for visualizations)
 - Git & GitHub
 
