@@ -22,7 +22,7 @@ This project is a web-based salary prediction system built using **Deep Learning
 
 The model is a feed-forward neural network with the following configuration:
 
-![Model Summary](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/blob/000.PNG)
+![Model Summary](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/tree/main/blob/000.PNG)
 
 ---
 
@@ -30,7 +30,7 @@ The model is a feed-forward neural network with the following configuration:
 
 The loss decreased significantly over epochs, indicating effective training:
 
-![Loss Curve](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/blob/0000.PNG)
+![Loss Curve](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/tree/main/blob/0000.PNG)
 
 ---
 
@@ -43,7 +43,7 @@ The loss decreased significantly over epochs, indicating effective training:
 
 These results indicate a highly accurate regression model:
 
-![Metrics](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/blob/00000.PNG)
+![Metrics](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/tree/main/blob/00000.PNG)
 
 ---
 
@@ -51,7 +51,7 @@ These results indicate a highly accurate regression model:
 
 The model's predictions align well with actual salary values:
 
-![Actual vs Predicted](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/blob/000000.PNG)
+![Actual vs Predicted](https://github.com/saran23523/Employee-salary-prediction-using-deep-learning-concept-and-voice-assistant-with-flask-23523/tree/main/blob/000000.PNG)
 
 ---
 
