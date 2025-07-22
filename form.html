@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salary Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #8ff199ff;
+      }
+
+      .container {
+        display: flex;
+        width: 80%;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .form-section {
+        flex: 1;
+        padding: 30px;
+      }
+
+      .divider {
+        width: 2px;
+        background-color: #ccc;
+      }
+
+      .result-section {
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      select,
+      input[type="number"] {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side: Form -->
+      <div class="form-section">
+        <h2>Predict Salary</h2>
+        <form action="/predict" method="POST">
+          {% for col in categorical_cols %}
+          <label>{{ col }}</label>
+          <select name="{{ col }}">
+            {% for val in column_values[col] %}
+            <option value="{{ val }}">{{ val }}</option>
+            {% endfor %}
+          </select>
+          {% endfor %} {% for col in numerical_cols %}
+          <label>{{ col }}</label>
+          <input type="number" step="any" name="{{ col }}" required />
+          {% endfor %}
+
+          <input type="submit" value="Predict" />
+        </form>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side: Result -->
+      <div class="result-section">
+        {% if prediction %}
+        <strong>{{ prediction }}</strong>
+        {% else %}
+        <em>Prediction will appear here.</em>
+        {% endif %}
+      </div>
+    </div>
+    <script>
+      // Speak out the prediction using Web Speech API
+      window.onload = function () {
+        const prediction = "{{ prediction }}";
+
+        if (prediction && prediction !== "None") {
+          const message = new SpeechSynthesisUtterance("{{ prediction }}");
+          message.lang = "en-IN"; // Indian English
+          message.rate = 1; // Speaking speed (1 is normal)
+          window.speechSynthesis.speak(message);
+        }
+      };
+    </script>
+  </body>
+</html>
